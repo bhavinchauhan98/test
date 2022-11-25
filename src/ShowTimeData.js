@@ -49,6 +49,30 @@ export const ShowTimeData = [
         time: "01:00 PM",
         rate: 300,
       },
+      {
+        time: "10:00 AM",
+        rate: 100,
+      },
+      {
+        time: "12:30 PM",
+        rate: 200,
+      },
+      {
+        time: "01:00 PM",
+        rate: 300,
+      },
+      {
+        time: "10:00 AM",
+        rate: 100,
+      },
+      {
+        time: "12:30 PM",
+        rate: 200,
+      },
+      {
+        time: "01:00 PM",
+        rate: 300,
+      },
     ],
   },
 ];

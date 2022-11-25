@@ -49,31 +49,36 @@ function App() {
         <option value="Mumbai Western">Mumbai Western</option>
         <option value="Mumbai Central">Mumbai Central</option>
       </select> */}
-      <button onClick={toggleDropDown} className="time_button">
-        Filter by sub-region
-      </button>
-      {dropdownFlag && (
-        <table className="dropdown">
-          <tbody>
-            <tr>
-              <input
-                type="checkbox"
-                value="Mumbai Central"
-                onClick={addToSubRegion}
-              />{" "}
-              Mumbai Central
-            </tr>
-            <tr>
-              <input
-                type="checkbox"
-                value="Mumbai Western"
-                onClick={addToSubRegion}
-              />{" "}
-              Mumbai Western
-            </tr>
-          </tbody>
-        </table>
-      )}
+      <div class="dropdown">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <b>Filter by sub-region</b>
+          <span class="caret"></span>
+        </button>
+        <ul className="dropdown-menu dropdown-end p-3" id="tags-dropdown">
+          <li>
+            <input
+              type="checkbox"
+              value="Mumbai Central"
+              onClick={addToSubRegion}
+            />{" "}
+            Mumbai Central
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              value="Mumbai Western"
+              onClick={addToSubRegion}
+            />{" "}
+            Mumbai Western
+          </li>
+        </ul>
+      </div>
 
       <ShowTime showTimeData={data} />
     </div>

@@ -2,28 +2,32 @@ import React from "react";
 
 function ShowTime({ showTimeData }) {
   return (
-    <table className="show_time_list">
-      <tbody>
+    <div className="container mt-5 card">
+      <div className="card-body">
         {showTimeData &&
           showTimeData.map((show) => (
-            <tr key={show.id} className="show_time_list_row">
-              <td>
+            <div key={show.id} className="row">
+              <div className="col-3">
                 <p>
-                  {show.theatreName}: {show.address.line2}
+                  <h6>{show.theatreName}</h6>
+                  {show.address.line2}
+                  {show.address.subRegion}
                 </p>
-                <p>{show.address.subRegion}</p>
-              </td>
-              <td>
+              </div>
+              <div className="col-9">
                 {show.timeSlots.map((slot) => (
-                  <button key={slot.time + slot.rate} className="time_button">
+                  <button
+                    key={slot.time + slot.rate}
+                    className="btn btn-secondary m-2"
+                  >
                     {slot.time}
                   </button>
                 ))}
-              </td>
-            </tr>
+              </div>
+            </div>
           ))}
-      </tbody>
-    </table>
+      </div>
+    </div>
   );
 }
 
